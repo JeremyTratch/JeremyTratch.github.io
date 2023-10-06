@@ -3,9 +3,10 @@
 ## Demos
 
 - [Bouncing Ball](01-ball)
+- [Ball Oject Notation](03-ball-object)
 
 ## Projects
-- [Interactive scean](02-scean)
+
 
 ## Example Markdown Link
 - [Some Demonstartion ]
