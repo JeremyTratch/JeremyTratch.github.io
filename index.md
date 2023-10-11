@@ -4,6 +4,7 @@
 
 - [Bouncing Ball](01-ball)
 - [Ball Oject Notation](03-ball-object)
+- [Ball Array](05-ball-array)
 
 ## Projects
 -[Arrays/object assignment](04 - Arrays assignment)
