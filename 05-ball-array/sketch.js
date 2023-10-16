@@ -47,7 +47,7 @@ function spawnBall() {
 
 function moveBall() {
   for (let i = 0; i < balls.length; i++) {
-  let theBall = balls[i];
+    let theBall = balls[i];
 
     theBall.x += theBall.dx;
     theBall.y += theBall.dy;

@@ -103,7 +103,7 @@ function spawnSquare() {
   let theSquare = {
     x: random(width),
     y: random(height),
-    radius: random(12, 30),
+    radius: random(20, 40),
     r: random(255),
     g: random(255), 
     b: random(255),
@@ -116,6 +116,7 @@ function spawnSquare() {
 
 
 function moveSquare() {
+  rectMode(center)
   for (let i = 0; i < squares.length; i++) {
     let theSquare = squares[i];
 
@@ -153,4 +154,9 @@ function displaySquare() {
   }
 }
 
+// make the squares disapear
+function vanish() {
+  for ()
+
+}
 
