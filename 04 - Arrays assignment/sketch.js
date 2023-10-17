@@ -14,6 +14,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   let theBall = spawnBall();
   balls.push(theBall);
+  
   let theSquare = spawnSquare();
   squares.push(theSquare);
 }
@@ -24,6 +25,7 @@ function draw() {
   displayBall();
   moveSquare();
   displaySquare();
+  vanish();
 }
 
 function mousePressed() {
@@ -32,7 +34,6 @@ function mousePressed() {
   someBall.y = mouseY;
   balls.push(someBall);
 }
-
 
 function spawnBall() {
   let theBall = {
@@ -47,8 +48,6 @@ function spawnBall() {
   };
   return theBall;
 }
-
-
 
 function moveBall() {
   for (let i = 0; i < balls.length; i++) {
@@ -88,7 +87,6 @@ function displayBall() {
   }
 }
 
-
 function keyPressed() {
   if (key === " ") {
     let someSquare = spawnSquare();
@@ -97,7 +95,6 @@ function keyPressed() {
     squares.push(someSquare);
   }
 }
-
 
 function spawnSquare() {
   let theSquare = {
@@ -109,11 +106,11 @@ function spawnSquare() {
     b: random(255),
     dx: random(-5, 5),
     dy: random(-5, 5),
+    cr: circle.width/2,
+    sr: square.width/2,
   };
   return theSquare;
 }
-
-
 
 function moveSquare() {
   rectMode(center)
@@ -146,6 +143,7 @@ function moveSquare() {
     console.log(theSquare.x, theSquare.y);
   }
 }
+
 function displaySquare() {
   for (let i = 0; i < squares.length; i++) {
     let theSquare = squares[i];
@@ -156,7 +154,8 @@ function displaySquare() {
 
 // make the squares disapear
 function vanish() {
-  for ()
-
+  for (cr + sr > dist(circle.x, circle.y, square.x, square.y)) {
+    arrayCopy.splice,1 
+  }   
 }
 

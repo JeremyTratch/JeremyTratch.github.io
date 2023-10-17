@@ -18,13 +18,11 @@ function draw() {
   displayBall();
 }
 
-
 function keyTyped() {
   if (key === " ") {
     theBall = spawnBall();
   }
 }
-
 
 function spawnBall() {
   let theBall = {
@@ -39,8 +37,6 @@ function spawnBall() {
   };
   return theBall;
 }
-
-
 
 function moveBall() {
   theBall.x += theBall.dx;
