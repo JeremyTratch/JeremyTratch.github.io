@@ -8,15 +8,18 @@
 
 let balls = [];
 let squares = [];
+let cr;
+let sr;
 
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   let theBall = spawnBall();
   balls.push(theBall);
-  
   let theSquare = spawnSquare();
   squares.push(theSquare);
+  cr = circle.width/2;
+  sr = square.width/2;
 }
 
 function draw() {
@@ -39,7 +42,7 @@ function spawnBall() {
   let theBall = {
     x: random(width),
     y: random(height),
-    radius: random(12, 30),
+    radius: random(16, 24),
     r: random(255),
     g: random(255), 
     b: random(255),
@@ -104,16 +107,14 @@ function spawnSquare() {
     r: random(255),
     g: random(255), 
     b: random(255),
-    dx: random(-5, 5),
-    dy: random(-5, 5),
-    cr: circle.width/2,
-    sr: square.width/2,
+    dx: random(-10, 10),
+    dy: random(-10, 10),
   };
   return theSquare;
 }
 
 function moveSquare() {
-  rectMode(center)
+  rectMode(CENTER);
   for (let i = 0; i < squares.length; i++) {
     let theSquare = squares[i];
 
@@ -154,8 +155,9 @@ function displaySquare() {
 
 // make the squares disapear
 function vanish() {
-  for (cr + sr > dist(circle.x, circle.y, square.x, square.y)) {
-    arrayCopy.splice,1 
-  }   
+  for (let i of )
+    if (cr + sr > dist(circle.x, circle.y, square.x, square.y)) {
+      arrayCopy.splice(1,1);
+    }
 }
 
