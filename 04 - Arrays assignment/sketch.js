@@ -155,9 +155,12 @@ function displaySquare() {
 
 // make the squares disapear
 function vanish() {
-  for (let i of )
-    if (cr + sr > dist(circle.x, circle.y, square.x, square.y)) {
+  for (let i = 0; i < squares.length && i < balls.length; i++) {
+    let square = squares[i];
+    if (cr + sr > dist(balls.x, balls.y, square.x, square.y)) {
       arrayCopy.splice(1,1);
     }
+  }
 }
+
 
