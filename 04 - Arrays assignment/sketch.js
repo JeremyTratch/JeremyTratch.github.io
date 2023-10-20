@@ -158,9 +158,20 @@ function vanish() {
   for (let i = 0; i < squares.length && i < balls.length; i++) {
     let square = squares[i];
     if (cr + sr > dist(balls.x, balls.y, square.x, square.y)) {
-      arrayCopy.splice(1,1);
+      balls.splice(i,1);
+      squares.splice(i,1);
     }
   }
 }
 
+// I tried maybe changing what I was splicing. Curently at my house I 
+// c'ant seem to run my code which is annoying so ill probably ask for
+// help. I think I also need to add somthing to get ride of the other
+// object by " minusing" it maybe with i-- somwhere.
 
+
+
+// Im very sorry this project isnt quite what I wished for it to turn
+// out like. I beleive that I tried to do somthing that I simply can't
+// due to my lack of knowledge in programing. However this does not
+// mean that I will give up, I can still try to figure this out.
