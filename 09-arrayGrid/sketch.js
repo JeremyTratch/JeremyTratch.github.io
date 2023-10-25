@@ -81,9 +81,13 @@ function gererateEmptyGrid(cols, rows) {
 }
 
 function mousePressed() {
-  for (let y = 0; y < GRID_SIZE; y++) {
-    for (let x = 0; x < GRID_SIZE; x++) {
-      if ( )
-    }
+  let  y = Math.floor(mouseY/cellSize);
+  let  x = Math.floor(mouseX/cellSize);
+
+  if (grid [y][x] === 1) {
+    grid[y][x] = 0;
+  }
+  else if (grid[y][x] === 0) {
+    grid[y][x] = 1;
   }
 }
