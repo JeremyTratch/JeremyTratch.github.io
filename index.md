@@ -10,6 +10,7 @@
 - [terrain generation](08-terrain)
 - [2d array grid](09-arrayGrid)
 - [Grid Neighbours](10-neigbours)
+- [Game of life](11-gameoflife)
 
 ## Projects
 -[Arrays/object assignment](04 - Arrays assignment)
