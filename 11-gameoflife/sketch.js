@@ -7,7 +7,7 @@
 
 let grid;
 let cellSize;
-const GRID_SIZE = 9;
+const GRID_SIZE = 7;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -89,10 +89,6 @@ function mousePressed() {
   let x = Math.floor(mouseX/cellSize);
 
   toggleCell(x, y); // current cell
-  toggleCell(x, y - 1); // north neigbour
-  toggleCell(x, y + 1); // south
-  toggleCell(x + 1, y); // east
-  toggleCell(x - 1, y); // west
 }
 
 function toggleCell(x, y) {

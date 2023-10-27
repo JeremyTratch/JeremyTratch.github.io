@@ -14,6 +14,7 @@
 
 ## Projects
 -[Arrays/object assignment](04 - Arrays assignment)
+-[2D Array-Project](Trap-The-Pig)
 
 ## Example Markdown Link
 - [Some Demonstartion ]
