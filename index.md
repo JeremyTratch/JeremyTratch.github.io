@@ -11,6 +11,7 @@
 - [2d array grid](09-arrayGrid)
 - [Grid Neighbours](10-neigbours)
 - [Game of life](11-gameoflife)
+- [character](12-character-in-grid)
 
 ## Projects
 -[Arrays/object assignment](04 - Arrays assignment)

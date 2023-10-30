@@ -7,7 +7,13 @@
 
 let grid;
 let cellSize;
-const GRID_SIZE = 7;
+const GRID_SIZE = 40;
+let gosperGun;
+
+function preload() {
+  gosperGun = loadJSON("gosper-gun.json");
+}
+
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -35,6 +41,9 @@ function keyTyped() {
   }
   else if (key === " ") {
     grid = nextTurn();
+  }
+  else if (key === "g") {
+    grid = gosperGun;
   }
 }
 
@@ -89,6 +98,10 @@ function mousePressed() {
   let x = Math.floor(mouseX/cellSize);
 
   toggleCell(x, y); // current cell
+  // toggleCell(x, y - 1); // north neigbour
+  // toggleCell(x, y + 1); // south
+  // toggleCell(x + 1, y); // east
+  // toggleCell(x - 1, y); // west
 }
 
 function toggleCell(x, y) {
