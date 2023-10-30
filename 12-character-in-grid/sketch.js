@@ -49,7 +49,7 @@ function keyTyped() {
     movePlayer(-1, 0);
   }
   else if (key === "d") {
-    movePlayer(-1, 0);
+    movePlayer(1, 0);
   }
 }
 
@@ -57,8 +57,11 @@ function movePlayer(x, y) {
   if (playerX + x >= 0 && playerX + x < GRID_SIZE && playerY + y >= 0 && playerY + y < GRID_SIZE) {
     // check for wall
     if (grid[playerY + y][playerX + x] === 0) {
-      let tempX = playerX += x;
-      let tempY = playerY += y;
+      let tempX = playerX;
+      let tempY = playerY;
+
+      playerX += x;
+      playerY += y;
 
       //update grid
       grid[playerY][playerX] = 9;
