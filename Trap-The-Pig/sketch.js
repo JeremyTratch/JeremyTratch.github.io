@@ -10,6 +10,12 @@ let cellSize;
 const GRID_SIZE = 40;
 let playerX = 0;
 let playerY = 0;
+let maze;
+
+function preload() {
+  maze = loadJSON("Maze 1JSON.json");
+}
+
 
 
 function setup() {
@@ -46,6 +52,9 @@ function keyTyped() {
   }
   else if (key === "d") {
     movePlayer(1, 0);
+  }
+  else if (key === "g") {
+    grid = maze;
   }
 }
 
