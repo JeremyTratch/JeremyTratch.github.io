@@ -1,4 +1,4 @@
-// Block Catch
+// Trap The Pig
 // Jeremy Tratch
 // October 27, 2023
 //
@@ -11,10 +11,6 @@ const GRID_SIZE = 40;
 let playerX = 0;
 let playerY = 0;
 let maze;
-
-function preload() {
-  maze = loadJSON("Maze 1JSON.json");
-}
 
 
 
@@ -35,6 +31,10 @@ function setup() {
 function draw() {
   background(220);
   displayGrid();
+}
+
+function preload() {
+  maze = loadJSON("Maze 1JSON.json");
 }
 
 function keyTyped() {
@@ -80,11 +80,7 @@ function mousePressed() {
   let y = Math.floor(mouseY/cellSize);
   let x = Math.floor(mouseX/cellSize);
 
-  toggleCell(x, y); // current cell
-  // toggleCell(x, y - 1); // north neigbour
-  // toggleCell(x, y + 1); // south
-  // toggleCell(x + 1, y); // east
-  // toggleCell(x - 1, y); // west
+  toggleCell(x, y);
 }
 
 function toggleCell(x, y) {
