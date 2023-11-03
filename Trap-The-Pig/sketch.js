@@ -11,8 +11,14 @@ const GRID_SIZE = 40;
 let playerX = 0;
 let playerY = 0;
 let maze;
+let maze2;
+let maze3;
 
+function preload() {
+  maze = loadJSON("maze1.json");
 
+  maze2 =loadJSON("maze2.json");
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -33,10 +39,6 @@ function draw() {
   displayGrid();
 }
 
-function preload() {
-  maze = loadJSON("Maze 1JSON.json");
-}
-
 function keyTyped() {
   if (key === "r") {
     grid = genRandGrid(GRID_SIZE, GRID_SIZE);
@@ -55,6 +57,9 @@ function keyTyped() {
   }
   else if (key === "g") {
     grid = maze;
+  }
+  else if (key === "h") {
+    grid = maze2;
   }
 }
 
