@@ -14,6 +14,7 @@ let maze;
 let maze2;
 let maze3;
 
+
 function preload() {
   maze = loadJSON("maze1.json");
 
