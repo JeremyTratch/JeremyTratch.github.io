@@ -10,15 +10,18 @@ let cellSize;
 const GRID_SIZE = 40;
 let playerX = 0;
 let playerY = 0;
-let maze;
+let maze1;
 let maze2;
 let maze3;
+let state = "start screen";
 
 
 function preload() {
-  maze = loadJSON("maze1.json");
+  maze1 = loadJSON("maze1.json");
 
   maze2 =loadJSON("maze2.json");
+
+  maze3 = loadJSON("maze3.json");
 }
 
 function setup() {
@@ -36,8 +39,15 @@ function setup() {
 }
 
 function draw() {
+  if  (state === "start screen") {
+    startScreen();
+  }
   background(220);
   displayGrid();
+}
+
+function startScreen() {
+  
 }
 
 function keyTyped() {
@@ -57,10 +67,13 @@ function keyTyped() {
     movePlayer(1, 0);
   }
   else if (key === "g") {
-    grid = maze;
+    grid = maze1;
   }
   else if (key === "h") {
     grid = maze2;
+  }
+  else if (key === "j"){
+    grid = maze3;
   }
 }
 
