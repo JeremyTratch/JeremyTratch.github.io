@@ -13,6 +13,7 @@ let playerY = 0;
 let maze1;
 let maze2;
 let maze3;
+let mazeScreen;
 let state = "start screen";
 
 
@@ -22,6 +23,8 @@ function preload() {
   maze2 =loadJSON("maze2.json");
 
   maze3 = loadJSON("maze3.json");
+
+  mazeScreen = loadImage("startMaze.jpg");
 }
 
 function setup() {
@@ -42,17 +45,26 @@ function draw() {
   if  (state === "start screen") {
     startScreen();
   }
-  background(220);
-  displayGrid();
+  if (state === "run game") {
+    background(220);
+    grid = maze1;
+    displayGrid();
+  }
 }
 
 function startScreen() {
-  
+  image(mazeScreen, 0, 0, width, height);
 }
 
 function keyTyped() {
-  if (key === "r") {
-    grid = genRandGrid(GRID_SIZE, GRID_SIZE);
+  if (key === " ") { 
+    state = "run game";
+  }
+  else if (key === "h") {
+    grid = maze2;
+  }
+  else if (key === "j"){
+    grid = maze3;
   }
   else if (key === "s") {
     movePlayer(0, 1);
@@ -65,15 +77,6 @@ function keyTyped() {
   }
   else if (key === "d") {
     movePlayer(1, 0);
-  }
-  else if (key === "g") {
-    grid = maze1;
-  }
-  else if (key === "h") {
-    grid = maze2;
-  }
-  else if (key === "j"){
-    grid = maze3;
   }
 }
 
@@ -94,13 +97,6 @@ function movePlayer(x, y) {
   }
 }
 
-
-function mousePressed() {
-  let y = Math.floor(mouseY/cellSize);
-  let x = Math.floor(mouseX/cellSize);
-
-  toggleCell(x, y);
-}
 
 function toggleCell(x, y) {
   if (x >= 0 && x < GRID_SIZE && y >= 0 && y < GRID_SIZE) {
