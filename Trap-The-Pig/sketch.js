@@ -50,6 +50,11 @@ function draw() {
     grid = maze1;
     displayGrid();
   }
+  if (state === "maze2") {
+    background(220);
+    grid = maze2;
+    displayGrid();
+  }
 }
 
 function startScreen() {
@@ -61,7 +66,7 @@ function keyTyped() {
     state = "run game";
   }
   else if (key === "h") {
-    grid = maze2;
+    state = "maze2";
   }
   else if (key === "j"){
     grid = maze3;

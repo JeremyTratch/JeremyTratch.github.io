@@ -12,6 +12,7 @@
 - [Grid Neighbours](10-neigbours)
 - [Game of life](11-gameoflife)
 - [character](12-character-in-grid)
+- [dog OOP demo](15-dog-oop)
 
 ## Projects
 -[Arrays/object assignment](04 - Arrays assignment)
