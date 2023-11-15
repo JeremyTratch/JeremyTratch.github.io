@@ -15,7 +15,7 @@ let maze2;
 let maze3;
 let mazeScreen;
 let state = "start screen";
-
+let titleFont;
 
 function preload() {
   maze1 = loadJSON("maze1.json");
@@ -25,6 +25,8 @@ function preload() {
   maze3 = loadJSON("maze3.json");
 
   mazeScreen = loadImage("startMaze.jpg");
+
+  titleFont = loadFont("fortnite.ttf");
 }
 
 function setup() {
@@ -59,6 +61,10 @@ function draw() {
 
 function startScreen() {
   image(mazeScreen, 0, 0, width, height);
+  textSize(100);
+  textFont(titleFont);
+  textAlign(CENTER, CENTER);
+  text("The maze escape", width/2, height/2);
 }
 
 function keyTyped() {
