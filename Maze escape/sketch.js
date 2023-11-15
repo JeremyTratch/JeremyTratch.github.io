@@ -15,7 +15,7 @@ let maze2;
 let maze3;
 let mazeScreen;
 let state = "start screen";
-
+let titleFont;
 
 function preload() {
   maze1 = loadJSON("maze1.json");
@@ -25,6 +25,8 @@ function preload() {
   maze3 = loadJSON("maze3.json");
 
   mazeScreen = loadImage("startMaze.jpg");
+
+  titleFont = loadFont("fortnite.ttf");
 }
 
 function setup() {
@@ -50,13 +52,19 @@ function draw() {
     grid = maze1;
     displayGrid();
   }
+  if (state === "maze2") {
+    background(220);
+    grid = maze2;
+    displayGrid();
+  }
 }
 
 function startScreen() {
   image(mazeScreen, 0, 0, width, height);
-  textSize(70)
-  fill("black")
-  Text("Press Space To Start", 200, 200)
+  textSize(100);
+  textFont(titleFont);
+  textAlign(CENTER, CENTER);
+  text("The maze escape", width/2, height/2);
 }
 
 function keyTyped() {
@@ -64,7 +72,7 @@ function keyTyped() {
     state = "run game";
   }
   else if (key === "h") {
-    grid = maze2;
+    state = "maze2";
   }
   else if (key === "j"){
     grid = maze3;
