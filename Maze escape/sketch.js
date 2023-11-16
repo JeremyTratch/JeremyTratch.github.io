@@ -71,7 +71,7 @@ function startScreen() {
 }
 
 function keyTyped() {
-  if (grid[playerY][playerX] === 19) {
+  if (grid[39][39] === 9) {
     whichMaze ++;
     if (whichMaze === 2) {
       state = "maze2";

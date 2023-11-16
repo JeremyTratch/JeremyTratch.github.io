@@ -15,6 +15,7 @@
 - [dog OOP demo](15-dog-oop)
 - [Walker OOP Demo](16-waler-oop)
 - [The ball OOP Demo](17-ball-oop)
+- [Connected ball OOP Demo](18-nodes)
 
 ## Projects
 -[Arrays/object assignment](04 - Arrays assignment)
