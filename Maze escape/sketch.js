@@ -66,6 +66,8 @@ function startScreen() {
   textFont(titleFont);
   textAlign(CENTER, CENTER);
   text("The maze escape", width/2, height/2);
+  textSize(50);
+  text("Press space to start", width/2, 500);
 }
 
 function keyTyped() {
@@ -79,7 +81,7 @@ function keyTyped() {
       state = "maze3";
       grid = maze3;
     }
-    else if (whichMaze = 1){
+    else if (whichMaze === 1){
       state = "maze1";
       grid = maze1;
     }
@@ -95,32 +97,32 @@ function keyTyped() {
 
 function keyPressed() {
   if (key === " ") { 
-     state = "run game";
+    state = "run game";
   } 
   else if (key === "h") {
     state = "maze2";
-}
+  }
   else if (key === "j"){
     grid = maze3;
-}
+  }
   else if (key === "s") {
     movePlayer(0, 1);
-}
+  }
   else if (key === "w") {
     movePlayer (0, -1);
-}
+  }
   else if (key === "a") {
     movePlayer(-1, 0);
-}
+  }
   else if (key === "d") {
     movePlayer(1, 0);
-}
+  }
 }
 
 function movePlayer(x, y) {
   if (playerX + x >= 0 && playerX + x < GRID_SIZE && playerY + y >= 0 && playerY + y < GRID_SIZE) {
     // check for wall
-    if (grid[playerY + y][playerX + x] === 0) {
+    if (grid[playerY + y][playerX + x] === 0 || grid[playerY + y][playerX + x] === 19) {
       let tempX = playerX;
       let tempY = playerY;
 
