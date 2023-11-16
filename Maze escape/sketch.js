@@ -16,6 +16,7 @@ let maze3;
 let mazeScreen;
 let state = "start screen";
 let titleFont;
+let whichMaze;
 
 function preload() {
   maze1 = loadJSON("maze1.json");
@@ -68,27 +69,52 @@ function startScreen() {
 }
 
 function keyTyped() {
-  if (key === " ") { 
-    state = "run game";
+  if (grid[playerY][playerX] === 19) {
+    whichMaze ++;
+    if (whichMaze === 2) {
+      state = "maze2";
+      grid = maze2;
+    }
+    else if (whichMaze === 3) {
+      state = "maze3";
+      grid = maze3;
+    }
+    else if (whichMaze = 1){
+      state = "maze1";
+      grid = maze1;
+    }
+    else {
+      whichMaze = 0;
+      state = "run game";
+    }
+    playerX = 0;
+    playerY = 0;
+    grid[playerY][playerX] = 9;
   }
+}
+
+function keyPressed() {
+  if (key === " ") { 
+     state = "run game";
+  } 
   else if (key === "h") {
     state = "maze2";
-  }
+}
   else if (key === "j"){
     grid = maze3;
-  }
+}
   else if (key === "s") {
     movePlayer(0, 1);
-  }
+}
   else if (key === "w") {
     movePlayer (0, -1);
-  }
+}
   else if (key === "a") {
     movePlayer(-1, 0);
-  }
+}
   else if (key === "d") {
     movePlayer(1, 0);
-  }
+}
 }
 
 function movePlayer(x, y) {
@@ -131,6 +157,9 @@ function displayGrid() {
       }
       else if (grid[y][x] === 9) {
         fill("green");
+      }
+      else if (grid[y][x] === 19) {
+        fill("red");
       }
       rect(x * cellSize, y * cellSize, cellSize, cellSize);
     }
