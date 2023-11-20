@@ -16,6 +16,7 @@
 - [Walker OOP Demo](16-waler-oop)
 - [The ball OOP Demo](17-ball-oop)
 - [Connected ball OOP Demo](18-nodes)
+- [Fireworks Deom](19-Fireworks)
 
 ## Projects
 -[Arrays/object assignment](04 - Arrays assignment)
