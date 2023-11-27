@@ -17,6 +17,8 @@
 - [The ball OOP Demo](17-ball-oop)
 - [Connected ball OOP Demo](18-nodes)
 - [Fireworks Deom](19-Fireworks)
+- [Inheritance OOP Demo](20-inheritance)
+- [collision Demo](21-collision)
 
 ## Projects
 -[Arrays/object assignment](04 - Arrays assignment)
